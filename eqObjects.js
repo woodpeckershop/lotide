@@ -39,16 +39,6 @@ function eqArrays(arrayA, arrayB) {
   return true;
 }
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    //return undefined;
-    console.log(`👍 👍 👍 Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    //return 'incorrect assertion'
-    console.log(`👎 👎 👎 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
 // let arr1 = [1, 2, 3];
 // let arr2 = [1, 2, 3];
 // console.log(arr1 === arr2);
