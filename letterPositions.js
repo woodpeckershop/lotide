@@ -4,7 +4,6 @@ const letterPositions = function (sentence) {
 
   for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] !== " ") {
-      console.log(sentence[i]);
       if (results[sentence[i]]) {
         results[sentence[i]].push(i);
         // console.log(results);
@@ -28,30 +27,8 @@ const letterPositions = function (sentence) {
   return results;
 };
 
-// const result1 = letterPositions("helllllo");
 
-// console.log(result1);
 
-// function eqArrays(arrayA, arrayB) {
-//   for (let i = 0; i < arrayA.length; i++) {
-//     if (arrayA[i] !== arrayB[i]) {
-//       return false;
-//     }
-//   }
-//   return true;
-// }
 
-// const assertArraysEqual = function (actual, expected) {
-//   if (eqArrays(actual, expected)) {
-//     console.log(`👍 👍 👍 Assertion Passed: ${actual} === ${expected}`);
-//   } else {
-//     console.log(`👎 👎 👎 Assertion Failed: ${actual} !== ${expected}`);
-//   }
-// };
-
-// assertArraysEqual(result1["h"], [0]);
-// assertArraysEqual(result1["e"], [1]);
-// assertArraysEqual(result1["l"], [2, 3]);
-// assertArraysEqual(result1["o"], [4]);
 
 module.exports = letterPositions
