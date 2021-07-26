@@ -28,9 +28,9 @@ const letterPositions = function (sentence) {
   return results;
 };
 
-const result1 = letterPositions("helllllo");
+// const result1 = letterPositions("helllllo");
 
-console.log(result1);
+// console.log(result1);
 
 // function eqArrays(arrayA, arrayB) {
 //   for (let i = 0; i < arrayA.length; i++) {
@@ -53,3 +53,5 @@ console.log(result1);
 // assertArraysEqual(result1["e"], [1]);
 // assertArraysEqual(result1["l"], [2, 3]);
 // assertArraysEqual(result1["o"], [4]);
+
+module.exports = letterPositions

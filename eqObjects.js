@@ -43,25 +43,25 @@ function eqArrays(arrayA, arrayB) {
 // let arr2 = [1, 2, 3];
 // console.log(arr1 === arr2);
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc)); // => true
+// const cd = { c: "1", d: ["2", 3] };
+// const dc = { d: ["2", 3], c: "1" };
+// console.log(eqObjects(cd, dc)); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2)); // => false
-const abc = {
-  a: [1, 2],
-  b: 4,
-  c: "3",
-};
+// const cd2 = { c: "1", d: ["2", 3, 4] };
+// console.log(eqObjects(cd, cd2)); // => false
+// const abc = {
+//   a: [1, 2],
+//   b: 4,
+//   c: "3",
+// };
 
-const bac = {
-  a: [1, 2],
-  b: 4,
-  c: 3,
-};
+// const bac = {
+//   a: [1, 2],
+//   b: 4,
+//   c: 3,
+// };
 
-console.log(eqObjects(abc, bac)); // => false
+// console.log(eqObjects(abc, bac)); // => false
 
 //assertEqual(eqObjects(cd, dc), true);
 //assertEqual(eqObjects(cd, cd2), false);
@@ -73,3 +73,5 @@ console.log(eqObjects(abc, bac)); // => false
 // console.log(eqObjects(ab, ba)); // => true
 // const abc = { a: "1", b: "2", c: "3" };
 // console.log(eqObjects(ab, abc)); // => false
+
+module.exports = eqObjects;
