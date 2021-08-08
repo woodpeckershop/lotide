@@ -3,25 +3,20 @@ const eqObjects = function (object1, object2) {
     return false;
   } else {
     const keysObj1 = Object.keys(object1);
+
     for (let key of keysObj1) {
-      //console.log(Array.isArray(object1[key]));
       if (Array.isArray(object1[key])) {
-        // console.log(object1[key]);
-        // console.log(object2[key]);
-        // console.log(eqArrays(object1[key], object2[key]));
         if (!eqArrays(object1[key], object2[key])) {
+          return false;
+        }
+      } else if (typeof object1[key] === "object") {
+        if (!eqObjects(object1[key], object2[key])) {
           return false;
         }
       } else if (object1[key] !== object2[key]) {
         return false;
       }
     }
-
-    // for (let key in object1) {
-    //   if (object1[key] !== object2[key]) {
-    //     return false;
-    //   }
-    // }
   }
 
   return true;
@@ -73,5 +68,14 @@ function eqArrays(arrayA, arrayB) {
 // console.log(eqObjects(ab, ba)); // => true
 // const abc = { a: "1", b: "2", c: "3" };
 // console.log(eqObjects(ab, abc)); // => false
+
+console.log(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => true
+
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 })); // => false
+console.log(
+  eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { b: 2, a: { y: 0, z: 1 } })
+); // => true
+
+console.log(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 })); // => false
 
 module.exports = eqObjects;
